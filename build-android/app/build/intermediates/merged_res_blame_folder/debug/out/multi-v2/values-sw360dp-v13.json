@@ -4,7 +4,7 @@
             "outputFile": "com.google.firebase.codelab.friendlychat.app-mergeDebugResources-38:/values-sw360dp-v13/values-sw360dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/major/.gradle/caches/transforms-3/da30ea6ee4df4dc4f9ab8fd689b7ce40/transformed/jetified-firebase-ui-auth-8.0.2/res/values-sw360dp-v13/values-sw360dp-v13.xml",
+                    "source": "/home/arule/.gradle/caches/transforms-3/10fa0252d4d5e102dba838b2e5a6d268/transformed/jetified-firebase-ui-auth-8.0.2/res/values-sw360dp-v13/values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",

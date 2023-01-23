@@ -4,7 +4,7 @@
             "outputFile": "com.google.firebase.codelab.friendlychat.app-mergeDebugResources-38:/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/home/major/.gradle/caches/transforms-3/bf2529228682c72aa891c0080ca36590/transformed/appcompat-1.6.0/res/values-watch-v20/values-watch-v20.xml",
+                    "source": "/home/arule/.gradle/caches/transforms-3/ed56528a4f75415902e7a97a9a1a04c8/transformed/appcompat-1.6.0/res/values-watch-v20/values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/major/.gradle/caches/transforms-3/9cc02767ab28281830ea30c4f414a146/transformed/jetified-play-services-auth-20.4.1/res/values-watch-v20/values.xml",
+                    "source": "/home/arule/.gradle/caches/transforms-3/980cdc22a05511f740baddb494a9f09d/transformed/jetified-play-services-auth-20.4.1/res/values-watch-v20/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",

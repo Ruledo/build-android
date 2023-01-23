@@ -4,7 +4,7 @@
             "outputFile": "com.google.firebase.codelab.friendlychat.app-mergeDebugResources-38:/values-v26/values-v26.xml",
             "map": [
                 {
-                    "source": "/home/major/.gradle/caches/transforms-3/da30ea6ee4df4dc4f9ab8fd689b7ce40/transformed/jetified-firebase-ui-auth-8.0.2/res/values-v26/values-v26.xml",
+                    "source": "/home/arule/.gradle/caches/transforms-3/10fa0252d4d5e102dba838b2e5a6d268/transformed/jetified-firebase-ui-auth-8.0.2/res/values-v26/values-v26.xml",
                     "from": {
                         "startLines": "2,6,10,14",
                         "startColumns": "4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/major/.gradle/caches/transforms-3/bf2529228682c72aa891c0080ca36590/transformed/appcompat-1.6.0/res/values-v26/values-v26.xml",
+                    "source": "/home/arule/.gradle/caches/transforms-3/ed56528a4f75415902e7a97a9a1a04c8/transformed/appcompat-1.6.0/res/values-v26/values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",

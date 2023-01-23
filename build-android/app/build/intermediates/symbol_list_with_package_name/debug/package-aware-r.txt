@@ -3474,6 +3474,7 @@ string facebook_login_protocol_scheme
 string fallback_menu_item_copy_link
 string fallback_menu_item_open_in_browser
 string fallback_menu_item_share_link
+string firebase_database_url
 string firebase_web_host
 string fresh_config
 string fui_accessibility_logo

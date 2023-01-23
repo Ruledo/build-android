@@ -66,16 +66,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // When running in debug mode, connect to the Firebase Emulator Suite
-        // "10.0.2.2" is a special value which allows the Android emulator to
-        // connect to "localhost" on the host computer. The port values are
-        // defined in the firebase.json file.
-        //if (BuildConfig.DEBUG) {
-        //    Firebase.database.useEmulator("192.168.88.120", 9000)
-        //    Firebase.auth.useEmulator("192.168.88.120", 9099)
-        //    Firebase.storage.useEmulator("192.168.88.120", 9199)
-        //}
-
         // Initialize Firebase Auth and check if the user is signed in
         auth = Firebase.auth
         if (auth.currentUser == null) {
@@ -87,7 +77,10 @@ class MainActivity : AppCompatActivity() {
 
         // Initialize Realtime Database
         db = Firebase.database
-        val messagesRef = db.reference.child(MESSAGES_CHILD)
+        val userId = auth.currentUser?.uid.toString()
+        val messagesRef = db.reference.child(MESSAGES_CHILD).child(userId)
+        val messageKey = messagesRef.push().key
+
 
         // The FirebaseRecyclerAdapter class and options come from the FirebaseUI library
         // See: https://github.com/firebase/FirebaseUI-Android
@@ -113,13 +106,16 @@ class MainActivity : AppCompatActivity() {
 
         // When the send button is clicked, send a text message
         binding.sendButton.setOnClickListener {
+            val userId = auth.currentUser?.uid.toString()
+            val userMessagesRef = db.reference.child(MESSAGES_CHILD).child(userId)
+            val messageKey = userMessagesRef.push().key
             val friendlyMessage = FriendlyMessage(
                 binding.messageEditText.text.toString(),
                 getUserName(),
                 getPhotoUrl(),
                 null
             )
-            db.reference.child(MESSAGES_CHILD).push().setValue(friendlyMessage)
+            db.reference.child(MESSAGES_CHILD).child(userId).push().setValue((friendlyMessage))
 
             getGpt3Response()
 
@@ -171,9 +167,11 @@ class MainActivity : AppCompatActivity() {
     private fun onImageSelected(uri: Uri) {
         Log.d(TAG, "Uri: $uri")
         val user = auth.currentUser
+        val userId = auth.currentUser?.uid.toString()
         val tempMessage = FriendlyMessage(null, getUserName(), getPhotoUrl(), LOADING_IMAGE_URL)
         db.reference
-                .child(MESSAGES_CHILD)
+                //.child(MESSAGES_CHILD)
+                .child(MESSAGES_CHILD).child(userId)
                 .push()
                 .setValue(
                         tempMessage,
@@ -198,6 +196,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun putImageInStorage(storageReference: StorageReference, uri: Uri, key: String?) {
         // First upload the image to Cloud Storage
+        val userId = auth.currentUser?.uid.toString()
         storageReference.putFile(uri)
             .addOnSuccessListener(
                 this
@@ -208,7 +207,8 @@ class MainActivity : AppCompatActivity() {
                         val friendlyMessage =
                             FriendlyMessage(null, getUserName(), getPhotoUrl(), uri.toString())
                         db.reference
-                            .child(MESSAGES_CHILD)
+                            //.child(MESSAGES_CHILD)
+                            .child(MESSAGES_CHILD).child(userId)
                             .child(key!!)
                             .setValue(friendlyMessage)
                     }
@@ -242,7 +242,7 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         private const val TAG = "MainActivity"
-        const val MESSAGES_CHILD = "messages"
+        const val MESSAGES_CHILD = "user-messages"
         //const val ANONYMOUS = "anonymous"
         const val ANONYMOUS = "GPT-3"
         private const val LOADING_IMAGE_URL = "https://www.google.com/images/spin-32.gif"
@@ -268,7 +268,7 @@ class MainActivity : AppCompatActivity() {
                     .url("https://api.openai.com/v1/completions")
                     .post(body)
                     .addHeader("Content-Type", "application/json")
-                    .addHeader("Authorization", "Bearer " + "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")
+                    .addHeader("Authorization", "Bearer " + "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")
                     .build()
             val response = OkHttpClient().newCall(request).execute()
 
@@ -286,8 +286,12 @@ class MainActivity : AppCompatActivity() {
         }.start()
     }
     private fun sendChatMessage(gptResponse: String) {
-        val messagesRef = db.reference.child(MESSAGES_CHILD)
+        //val messagesRef = db.reference.child(MESSAGES_CHILD)
+        //val messageKey = messagesRef.push().key
+        val userId = auth.currentUser?.uid.toString()
+        val messagesRef = db.reference.child(MESSAGES_CHILD).child(userId)
         val messageKey = messagesRef.push().key
+
         if (messageKey == null) {
             Log.e("MainActivity", "Couldn't get push key for message")
             return
@@ -299,6 +303,7 @@ class MainActivity : AppCompatActivity() {
                 "https://openai.com/content/images/2022/05/openai-avatar.png"
         )
 
-        db.reference.child(MESSAGES_CHILD).push().setValue(friendlyMessage)
+        //db.reference.child(MESSAGES_CHILD).push().setValue(friendlyMessage)
+        db.reference.child(MESSAGES_CHILD).child(userId.toString()).push().setValue(friendlyMessage)
     }
 }
