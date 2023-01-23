@@ -1,0 +1,19 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/home/major/.cache/firebase/emulators/firebase-database-emulator-v4.11.0.jar) to field sun.nio.ch.SelectorImpl.selectedKeys
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+16:38:16.199 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+16:38:16.276 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+16:38:20.960 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - demo-friendlychat-android-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 96ms, init: 0ms
+16:38:21.017 [NamespaceSystem-blocking-namespace-operation-dispatcher-6] INFO com.firebase.core.namespace.StateManager - Namespace demo-friendlychat-android-default-rtdb status Active to Active
+16:51:21.395 [FirebaseWorkerPool-1-3] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested 
+namespace demo-friendlychat-android, but the emulator is configured for demo-friendlychat-android-default-rtdb. To 
+opt-out of single project mode add/set the single_project_mode: false property in 
+the firebase.json emulators config. 
+16:51:21.410 [NamespaceSystem-akka.actor.default-dispatcher-12] INFO com.firebase.core.namespace.NamespaceActor - demo-friendlychat-android successfully activated FBKV (SurveyIdle(0)) wait: 4ms, init: 0ms
+17:10:43.858 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
+17:10:43.862 [NamespaceSystem-akka.actor.default-dispatcher-8] INFO com.firebase.core.namespace.Terminator$Terminator - 2 actors left to terminate: demo-friendlychat-android-default-rtdb, demo-friendlychat-android
+17:10:43.865 [NamespaceSystem-akka.actor.default-dispatcher-33] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for demo-friendlychat-android
+17:10:43.865 [NamespaceSystem-akka.actor.default-dispatcher-30] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for demo-friendlychat-android-default-rtdb
+17:10:43.867 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.

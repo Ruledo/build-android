@@ -1,0 +1,9 @@
+com.google.firebase.codelab.friendlychat.test.app-jetified-core-1.5.0-0 /home/major/.gradle/caches/transforms-3/661e7d48e129448993ef63611a07ef62/transformed/jetified-core-1.5.0/res
+com.google.firebase.codelab.friendlychat.test.app-jetified-annotation-experimental-1.3.0-1 /home/major/.gradle/caches/transforms-3/ec757473c1409cca27752c9fbc78a40d/transformed/jetified-annotation-experimental-1.3.0/res
+com.google.firebase.codelab.friendlychat.test.app-androidTest-2 /home/major/AndroidStudioProjects/codelab-friendlychat-android/build-android/app/build/generated/res/resValues/androidTest/debug
+com.google.firebase.codelab.friendlychat.test.app-androidTest-3 /home/major/AndroidStudioProjects/codelab-friendlychat-android/build-android/app/build/generated/res/rs/androidTest/debug
+com.google.firebase.codelab.friendlychat.test.app-mergeDebugAndroidTestResources-4 /home/major/AndroidStudioProjects/codelab-friendlychat-android/build-android/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.google.firebase.codelab.friendlychat.test.app-mergeDebugAndroidTestResources-5 /home/major/AndroidStudioProjects/codelab-friendlychat-android/build-android/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.google.firebase.codelab.friendlychat.test.app-merged_res-6 /home/major/AndroidStudioProjects/codelab-friendlychat-android/build-android/app/build/intermediates/merged_res/debugAndroidTest
+com.google.firebase.codelab.friendlychat.test.app-androidTest-7 /home/major/AndroidStudioProjects/codelab-friendlychat-android/build-android/app/src/androidTest/res
+com.google.firebase.codelab.friendlychat.test.app-androidTestDebug-8 /home/major/AndroidStudioProjects/codelab-friendlychat-android/build-android/app/src/androidTestDebug/res

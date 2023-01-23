@@ -1,0 +1,3 @@
+com.google.firebase.codelab.friendlychat.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

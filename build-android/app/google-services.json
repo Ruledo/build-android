@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "258944120831",
+    "project_id": "inquest-98fb8",
+    "storage_bucket": "inquest-98fb8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258944120831:android:5638fa9232b5f601a919ca",
+        "android_client_info": {
+          "package_name": "com.google.firebase.codelab.friendlychat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258944120831-7e8jt20jpt245902lq22jd0s137rpvcs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.firebase.codelab.friendlychat",
+            "certificate_hash": "ec0cc2ef4bd52b06e8c3e52cb564147c9d2a2cf5"
+          }
+        },
+        {
+          "client_id": "258944120831-814gv30lvitennos1on58njq2kc2g2uq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPjM3T-gfN4azlVg0vUmWpGCPvGVUjOJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258944120831-814gv30lvitennos1on58njq2kc2g2uq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
